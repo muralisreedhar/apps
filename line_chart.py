@@ -2,12 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-chart_data = pd.DataFrame(
-    {
-        "col1": np.random.randn(20),
-        "col2": np.random.randn(20),
-        "col3": np.random.choice(["A", "B", "C"], 20),
-    }
-)
 
-st.line_chart(chart_data, x="col1", y="col2", color="col3")
+# list of name, degree, score
+assess = ["Health History Assessment", "Auditory Processing Test", "Social Communication"]
+year = ["2010", "2013", "2016"]
+score = [90, 40, 80, 98]
+ 
+# dictionary of lists 
+dict = {'category': assess, 'year': year, 'score': score} 
+   
+df = pd.DataFrame(dict)
+
+st.line_chart(df, x="year", y="category", color="score")
