@@ -6,7 +6,7 @@ import numpy as np
 # list of name, degree, score
 assess = ["Health History Assessment", "Auditory Processing Test", "Social Communication"]
 year = ["2010", "2013", "2016"]
-score = [90, 40, 80, 98]
+score = [90, 40, 80]
  
 # dictionary of lists 
 dict = {'category': assess, 'year': year, 'score': score} 
